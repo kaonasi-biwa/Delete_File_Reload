@@ -114,7 +114,7 @@ namespace Delete_Files_Reload
 
         private void button5_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Insert(0, textBox2.Text);
+            listBox2.Items.Insert(0, textBox2.Text);
         }
 
         private void button8_Click(object sender, EventArgs e)
