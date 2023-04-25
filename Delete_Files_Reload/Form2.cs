@@ -26,6 +26,7 @@ namespace Delete_Files_Reload
                 files =
     di.GetFiles(extension, System.IO.SearchOption.TopDirectoryOnly);
             }
+            checkedListBox1.CheckOnClick = true;
 
             checkedListBox1.Items.AddRange(files);
         }
@@ -79,6 +80,35 @@ namespace Delete_Files_Reload
 MessageBoxButtons.OK);
 
             this.Close();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, true);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, !checkedListBox1.GetItemChecked(i));
+            }
         }
     }
 }
